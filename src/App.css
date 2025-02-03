@@ -1,0 +1,196 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&family=Spectral+SC:wght@400;500;600&display=swap");
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --font-primary: "Open Sans", sans-serif;
+    --font-secondary: "Spectral SC", serif;
+    --primary-bg: #6a4c93;
+    --secondary-bg: #f0e5d8;
+    --accent-color: #f2a900;
+    --text-color: #333;
+    --border-radius: 15px;
+    --shadow-light: rgba(0, 0, 0, 0.15);
+    --shadow-heavy: rgba(0, 0, 0, 0.3);
+}
+
+body {
+    font-family: var(--font-primary);
+    background: linear-gradient(135deg, #6a4c93 0%, #6e44ff 100%);
+    color: var(--text-color);
+}
+
+.app {
+    padding: 4rem 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+h1 {
+    font-size: 3rem;
+    font-family: var(--font-secondary);
+    text-transform: uppercase;
+    color: var(--accent-color);
+    text-shadow: 2px 2px var(--shadow-light);
+    margin-bottom: 2rem;
+}
+
+.search {
+    width: 80%;
+    margin: 2rem 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: var(--secondary-bg);
+    padding: 1rem 2rem;
+    border-radius: var(--border-radius);
+    box-shadow: 0px 4px 6px var(--shadow-light);
+}
+
+.search input {
+    width: 80%;
+    padding: 0.8rem;
+    font-size: 1.3rem;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-family: var(--font-primary);
+    color: var(--text-color);
+    background: #fff;
+    box-shadow: 0px 3px 4px rgba(0, 0, 0, 0.1);
+    outline: none;
+}
+
+.search input:focus {
+    border-color: var(--accent-color);
+    box-shadow: 0px 3px 6px var(--shadow-heavy);
+}
+
+.search img {
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+}
+
+.empty {
+    margin-top: 2rem;
+    text-align: center;
+}
+
+.empty h2 {
+    font-size: 1.5rem;
+    color: var(--accent-color);
+    font-family: var(--font-secondary);
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-top: 3rem;
+}
+
+.movie {
+    width: 300px;
+    height: 420px;
+    margin: 1rem;
+    position: relative;
+    border-radius: var(--border-radius);
+    overflow: hidden;
+    background: #fff;
+    box-shadow: 0px 12px 20px var(--shadow-light);
+}
+
+/* Ensure the poster is always visible and takes the full size */
+.movie img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;  /* Ensures the image covers the container */
+}
+
+.movie-year {
+    padding: 10px;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    font-size: 1rem;
+    font-family: var(--font-secondary);
+}
+
+.movie-details {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 1rem;
+    background-color: rgba(0, 0, 0, 0.6);
+    color: #fff;
+    border-top-left-radius: var(--border-radius);
+    border-top-right-radius: var(--border-radius);
+}
+
+.movie-details span {
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+
+.movie-details h3 {
+    font-family: var(--font-secondary);
+    font-size: 1.5rem;
+    margin-top: 0.5rem;
+}
+
+@media screen and (max-width: 768px) {
+    .app {
+        padding: 3rem 1.5rem;
+    }
+
+    .search {
+        width: 100%;
+        padding: 1rem;
+    }
+
+    .search input {
+        font-size: 1.2rem;
+    }
+
+    .container {
+        margin-top: 2rem;
+        flex-direction: column;
+    }
+
+    .movie {
+        width: 250px;
+        height: 380px;
+        margin: 1rem auto;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .app {
+        padding: 2rem 1rem;
+    }
+
+    h1 {
+        font-size: 2.5rem;
+    }
+
+    .search input {
+        font-size: 1rem;
+    }
+
+    .movie {
+        width: 100%;
+        margin: 1rem 0;
+    }
+}
