@@ -1,5 +1,31 @@
-# Movie Search App using React JS
+# Movie Search App
 
-This Movie Search App is a beginner-friendly React JS project that enables users to explore movies by title. It utilizes the power of the OMDb API for movie data retrieval, offering features like searching for movies, displaying detailed information about selected films, and presenting a list of popular movies. With its responsive design, it adapts seamlessly to various screen sizes. This project serves as an excellent learning opportunity for newcomers to React and API integration, allowing them to build a functional movie search application from scratch.
+A React-based web application that allows users to search for movies and view their details using the [OMDb API](http://www.omdbapi.com/).
 
-![Movie Search App](public/MovieSearchApp.png)
+## Features
+
+- Search for movies by title.
+- Display movie details such as plot, rating, and release year.
+- Responsive design for optimal use on desktop and mobile devices.
+
+## Technologies Used
+
+- **React** - JavaScript library for building user interfaces.
+- **Vite** - Next-generation, fast, and optimized build tool.
+- **OMDb API** - External API for fetching movie data.
+
+## Getting Started
+
+To get a local copy of the project up and running, follow these steps:
+
+### Prerequisites
+
+You must have [Node.js](https://nodejs.org/) installed on your machine.
+
+### Installation
+
+1. Clone the repository:
+
+   ```bash
+   git clone https://github.com/Siabus/Movie.git
+
